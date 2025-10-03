@@ -4,6 +4,9 @@
     margin: 0;
     -webkit-tap-highlight-color: transparent;
 }
+html{
+    scroll-behavior: smooth; 
+}
 body{
     font-family: 'Lato', sans-serif;
     height: 115vh;
