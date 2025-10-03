@@ -199,7 +199,7 @@ body{
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(65, 74, 55, 0.7);
+        background-color: rgba(65, 74, 55, 0.2);
         z-index: -1;
     }
     #links-container a{
