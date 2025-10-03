@@ -24,7 +24,7 @@ nav ul{
     position: sticky;
     top: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 5px 100px;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
@@ -92,6 +92,7 @@ nav ul{
 /*Company Logo*/
 .logo{
     font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 /*Main Container*/
@@ -100,7 +101,8 @@ nav ul{
     justify-content: space-evenly;
     flex-wrap: wrap;
     flex-direction: row;
-    padding: 50px 50px;
+    padding: 50px 40px;
+    padding-bottom: 30px;
     background-color: #414A37;
     transition: 0.5s ease-out;
     margin: 30px 40px;
@@ -111,6 +113,25 @@ nav ul{
     background-color:  #DBC2A6;
     box-shadow: none;
     border-radius: 0;
+}
+/*Entry Animation*/
+#up{
+    transform: translateY(-100px);
+    opacity: 0;
+}
+#down{
+    transform: translateY(100px);
+    opacity: 0;
+}
+#down.down{
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 1s ease-out, opacity 1s ease-in;
+}
+#up.up{
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 1s ease-out, opacity 1s ease-in;
 }
 
 /*Text Side*/
@@ -140,7 +161,7 @@ h1{
     color: #414A37;
     background-color: #DBC2A6;
     padding: 12px 24px; 
-    margin: 10px;
+    margin: 20px;
     border-radius: 20px;
     transition: 0.3s ease-out;
     font-size: 1.3rem;
@@ -152,7 +173,7 @@ h1{
     box-shadow: 5px 5px 10px black;
 }
 .container.scrolled .right a{
-    color: #DBC2A6;
+    color: rgb(219, 194, 166);
     background-color: #414A37;
 }
 
@@ -166,12 +187,36 @@ h1{
     height: 500px;
     width: 200px;
     flex-grow: 1;
+    filter: drop-shadow(0 0 5px rgba(219, 194, 166,1));
+}
+.container.scrolled .left{
+    filter: drop-shadow(-35px -3px 1px rgba(65, 74, 55,1));
 }
 button{
     display: none;
 }
 
+
+
 /*Responsive*/
+@media (max-width:768px){
+    .container{
+        gap: 30px;
+        padding: 10px 20px;
+    }
+    .navbar{
+        padding: 20px 30px;
+    }
+    .right{
+        font-size: 1.2rem;
+        padding: 0;
+    }
+    .left{
+        flex-grow: 0;
+        height: 400px;
+        width: 250px;
+    }
+}
 @media (max-width:426px){
     body{
         min-height: 100vh;
@@ -184,29 +229,35 @@ button{
         margin: 0;
     }
     .navbar{
-        padding:0;  
+        padding: 6px 12px;  
     }
     .container{
-        margin: 30px 0;
+        gap: 0;
+        margin: 30px 20px;
         padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        box-shadow: none;
-        border-radius: 0;
+        box-shadow: 10 10px 10px;
+        border-radius: 20px;
         flex-grow: 1;
         max-width: 100%;    
     }
+    .container.scrolled .left{
+    filter: drop-shadow(-15px -1px 1px rgba(65, 74, 55,1));
+}
     .left{
-        height: 200px;
-        width: 150px;
+        height: 12.5rem;
+        width: 9.3rem;
+        filter: drop-shadow(0 0 5px rgba(219, 194, 166,1));
     }
     h1{
         font-size: 2.5rem;
         font-weight: bold;
     }
     .right{
+        margin: 10px 0;
         display: flex;
         justify-content: center;
         text-align: center;
@@ -215,7 +266,8 @@ button{
         font-size: 1rem;
     }
     .right a{
-        padding: 6px 12px;
+        margin-top: 20px;
+        padding: 0.3rem 0.7rem;
     }
     nav ul{
         display: flex;
@@ -276,8 +328,18 @@ button{
         display: block;
     }
 }
-@media (max-width:768px){
-    .navbar{
-        padding: 20px 20px;
+@media (max-width: 321px){
+    .right{
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+    .left{
+        height: 10rem;
+        width: 7rem;
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        gap: 0;
     }
 }

@@ -1,11 +1,28 @@
 const hamburger = document.getElementById("hamburger");
-const links = document.getElementById("links-container"); 
+const links_container = document.getElementById("links-container"); 
+const up = document.getElementById("up");
+const down = document.getElementById("down");
+const links = document.querySelectorAll(".link");
+
+links.forEach(link=>{
+    link.addEventListener("click",()=>{
+        links_container.classList.remove("menu");
+    });
+})
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+    up.classList.add("up");
+    down.classList.add("down");
+}); 
+
 hamburger.addEventListener("click",()=>{
-    links.classList.toggle("menu");
+    links_container.classList.toggle("menu");
 });
+
 const close = document.getElementById("close");
 close.addEventListener("click",()=>{
-    links.classList.remove("menu");
+    links_container.classList.remove("menu");
 });
 
 window.addEventListener('scroll',function(){
