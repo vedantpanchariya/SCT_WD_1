@@ -1,9 +1,13 @@
 const hamburger = document.getElementById("hamburger");
+const links = document.getElementById("links-container"); 
 hamburger.addEventListener("click",()=>{
-    const links = document.getElementById("links-container");   
     links.classList.toggle("menu");
-    hamburger.classList.toggle("clicked");
 });
+const close = document.getElementById("close");
+close.addEventListener("click",()=>{
+    links.classList.remove("menu");
+});
+
 window.addEventListener('scroll',function(){
     const navbar = document.querySelector(".navbar");
     const container = document.querySelector(".container");
