@@ -1,6 +1,5 @@
 const hamburger = document.getElementById("hamburger");
 const links_container = document.getElementById("links-container"); 
-
 const links = document.querySelectorAll(".link");
 const products = document.querySelectorAll("#products");
 
@@ -12,19 +11,9 @@ const observer = new IntersectionObserver((element)=>{
         }
     });
 },{
-    threshold: 0.3
-
+    threshold: 0.1
 });
-document.addEventListener("DOMContentLoaded",()=>{
-    products.classList.remove("visible");
-    void up.offsetWidth;
-
-    setTimeout(()=>{
-        products.classList.add("visible");
-    },100)
-})
-
-products.forEach(prdouct=> observer.observe(prdouct));
+products.forEach(product=>observer.observe(product));
 
 
 if ('scrollRestoration' in history) {
@@ -46,6 +35,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     down.classList.remove("down");
 
     void up.offsetWidth;
+    void down.offsetWidth
 
     setTimeout(()=>{    
 
