@@ -13,6 +13,7 @@ const observer = new IntersectionObserver((element)=>{
     });
 },{
     threshold: 0.3
+
 });
 document.addEventListener("DOMContentLoaded",()=>{
     products.classList.remove("visible");
