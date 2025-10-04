@@ -1,19 +1,57 @@
 const hamburger = document.getElementById("hamburger");
 const links_container = document.getElementById("links-container"); 
-const up = document.getElementById("up");
-const down = document.getElementById("down");
+
 const links = document.querySelectorAll(".link");
+const products = document.querySelectorAll("#products");
+
+const observer = new IntersectionObserver((element)=>{
+    element.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+        }
+    });
+},{
+    threshold: 0.3
+});
+document.addEventListener("DOMContentLoaded",()=>{
+    products.classList.remove("visible");
+    void up.offsetWidth;
+
+    setTimeout(()=>{
+        products.classList.add("visible");
+    },100)
+})
+
+products.forEach(prdouct=> observer.observe(prdouct));
+
+
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
 
 links.forEach(link=>{
     link.addEventListener("click",()=>{
         links_container.classList.remove("menu");
     });
-})
-
+});
 
 document.addEventListener('DOMContentLoaded',()=>{
-    up.classList.add("up");
-    down.classList.add("down");
+
+    const up = document.getElementById("up");
+    const down = document.getElementById("down");
+
+    up.classList.remove("up");
+    down.classList.remove("down");
+
+    void up.offsetWidth;
+
+    setTimeout(()=>{    
+
+        up.classList.add("up");
+        down.classList.add("down");
+
+    },100);
 }); 
 
 hamburger.addEventListener("click",()=>{
@@ -27,7 +65,7 @@ close.addEventListener("click",()=>{
 
 window.addEventListener('scroll',function(){
     const navbar = document.querySelector(".navbar");
-    const container = document.querySelector(".container");
+    const container = document.querySelector("#container");
     if(window.scrollY > 30){
         navbar.classList.add("scrolled");
         container.classList.add("scrolled");
