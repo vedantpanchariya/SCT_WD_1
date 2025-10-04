@@ -4,9 +4,12 @@
     margin: 0;
     -webkit-tap-highlight-color: transparent;
 }
+html{
+    scroll-behavior: smooth; 
+}
 body{
     font-family: 'Lato', sans-serif;
-    height: 120vh;
+    height: 115vh;
     background-color: #DBC2A6;
     cursor:pointer;
 }
@@ -301,22 +304,10 @@ button{
         width: min(15em,100%);
         background-color: #414A37;
         z-index: 1001;
-        padding: 40px 20px;
+        padding: 30px 5px;
     }
     #links-container.menu{
         right: 0;
-        z-index: 1001;
-    }
-    #links-container.menu::before{
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: min(15em,100%);
-        background-color: rgba(65, 74, 55, 1);
-        z-index: -1;
-        pointer-events: none;
     }
     #links-container a{
         color: white;
