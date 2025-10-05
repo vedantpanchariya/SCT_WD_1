@@ -1,19 +1,20 @@
 const hamburger = document.getElementById("hamburger");
 const links_container = document.getElementById("links-container"); 
 const links = document.querySelectorAll(".link");
-const products = document.querySelectorAll("#products");
+const product = document.querySelectorAll(".product");
 
 const observer = new IntersectionObserver((element)=>{
     element.forEach(entry => {
         if(entry.isIntersecting){
             entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
+        }else{
+            entry.target.classList.remove("visible");
         }
     });
 },{
-    threshold: 0.1
+    threshold : 0.2      
 });
-products.forEach(product=>observer.observe(product));
+product.forEach(products=>observer.observe(products));
 
 
 if ('scrollRestoration' in history) {
@@ -30,10 +31,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     const up = document.getElementById("up");
     const down = document.getElementById("down");
-
     up.classList.remove("up");
     down.classList.remove("down");
-
     void up.offsetWidth;
     void down.offsetWidth
 

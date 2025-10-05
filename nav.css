@@ -79,6 +79,9 @@ nav ul{
     transform: scaleX(0);
     transform-origin: right;
 }
+.navbar{
+    border-bottom: 0.1px solid #414A37;
+}
 
 /* MENU */
 .burger{
@@ -87,12 +90,6 @@ nav ul{
   height: 3px;
   background-color: #414A37;
   margin: 6px;
-}
-.line{
-    position: fixed;    
-    height: 1px;
-    width: 100%;
-    background-color: #414A37;  
 }
 
 /*Company Logo*/
@@ -210,9 +207,6 @@ h1{
     padding-top: 40px;
 }
 #products{
-    opacity: 0;
-    transform: translateX(50px);
-    transition: transform 1s ease-in, opacity 1s ease-in;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     padding: 20px 70px;
@@ -220,13 +214,18 @@ h1{
     max-width: 1400px;      
     margin: 0 auto;
     padding-bottom: 40px;
+    overflow: hidden;
 }
-#products.visible{
+.product{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+#products .product.visible{
     opacity: 1;
     transform: translateY(0);
 }
 .product{
-
     display: flex;
     flex-direction: column-reverse;
     background-color: white;
@@ -234,7 +233,6 @@ h1{
     color: black;
     text-decoration: none;
     overflow: hidden;
-    transition: transform 0.3s ease-out;
 }
 .product:hover{
     text-decoration: underline;
@@ -375,6 +373,10 @@ footer .bottom{
 
 /*Responsive*/
 @media (max-width:769px){
+    body{
+        min-height: 100dvh;
+        max-width: 100%;
+    }
     #container{
         gap: 30px;
         padding: 10px 20px;
@@ -421,14 +423,13 @@ footer .bottom{
         gap: 30px;
         padding: 30px 20px;
     }
-    
     .social a svg{
         height: 28px;
     }
 }
 @media (max-width:426px){
     body{
-        
+        min-height: 100dvh;
         max-width: 100%;
     }
     .logo{
@@ -530,7 +531,7 @@ footer .bottom{
         display: block;
     }
     #products{
-        grid-template-columns: (2,1fr);
+        grid-template-columns: repeat(2,1fr);
         padding: 20px 20px;
     }
     .product div{
