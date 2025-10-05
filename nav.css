@@ -251,7 +251,7 @@ h1{
     padding: 20px;
     text-align: center;
     color: #414A37;
-    font-size: 16px;
+    font-size: 16px;    
     font-weight: 600;
 }
 #image2{
@@ -261,7 +261,7 @@ h1{
     background-image: url(images/over.png);
 }
 #image4{
-    background-image: url(images/portable-speaker.png);
+    background-image: url(images/speaker.png);
 }
 #image5{
     background-image: url(images/smart-watch.png);
@@ -374,7 +374,7 @@ footer .bottom{
 }
 
 /*Responsive*/
-@media (max-width:768px){
+@media (max-width:769px){
     #container{
         gap: 30px;
         padding: 10px 20px;
@@ -400,12 +400,18 @@ footer .bottom{
         font-weight: 400;
     }
     #products { 
-        grid-template-columns: repeat(2, 1fr);
-        padding: 40px 60px;
+        grid-template-columns: repeat(2,1fr);
+        padding: 40px 30px;
         gap: 30px;
     }
+    .social a svg{
+        height: 22px;
+    }
+    .extra{
+        text-align: center;
+    }
     .product div{
-        height: 150px;
+        height: 200px;
     }
     .product span{
         padding: 15px;
@@ -524,28 +530,40 @@ footer .bottom{
         display: block;
     }
     #products{
-        grid-template-columns: 1fr;
-        padding: 20px 60px;
+        grid-template-columns: (2,1fr);
+        padding: 20px 20px;
     }
     .product div{
-        height: 150px;
+        height: 100px;
     }
     .product span{
-        padding: 15px;
+        padding: 12px;
+        font-size: 12px;
     }
     footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         min-height: auto;
+        font-size: 14px;
+        line-height: 1.2rem;
     }
-    
+    .social a svg{
+        height: 20px;
+    }
+    footer h3{
+        padding-bottom: 10px;
+    }
     .container{
         grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 30px 20px;
+        gap: 20px;
+        padding: 20px 20px;
         text-align: center;
     }
     
     .get-in-touch{
-        text-align: center;
+        text-align: start;
         align-items: center;
     }
     
@@ -559,7 +577,7 @@ footer .bottom{
         max-width: 100%;
         margin: 0 auto;
     }
-    
+
     .top{
         justify-content: center;
         padding: 20px;
@@ -569,7 +587,7 @@ footer .bottom{
         padding: 0.5em;
     }
     .copyrights{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     .social a svg{
         height: 24px;
@@ -594,5 +612,11 @@ footer .bottom{
     }
     .product span{
         padding: 10px;
+    }
+    .product div{
+        height: 80px;
+    }
+    .product span{
+        font-size: 12px;
     }
 }
