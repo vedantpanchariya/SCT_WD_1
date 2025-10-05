@@ -13,7 +13,6 @@ const observer = new IntersectionObserver((element)=>{
     });
 },{
     threshold:0.2
-
 });
 product.forEach(products=>observer.observe(products));
 
@@ -32,8 +31,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     const up = document.getElementById("up");
     const down = document.getElementById("down");
+
     up.classList.remove("up");
     down.classList.remove("down");
+
     void up.offsetWidth;
     void down.offsetWidth
 
@@ -57,6 +58,7 @@ close.addEventListener("click",()=>{
 window.addEventListener('scroll',function(){
     const navbar = document.querySelector(".navbar");
     const container = document.querySelector("#container");
+    
     if(window.scrollY > 30){
         navbar.classList.add("scrolled");
         container.classList.add("scrolled");

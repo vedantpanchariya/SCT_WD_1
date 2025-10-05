@@ -4,9 +4,11 @@
     margin: 0;
     -webkit-tap-highlight-color: transparent;
 }
+
 html{
     scroll-behavior: smooth;
 }
+
 body{
     font-family: 'Lato', sans-serif;
     min-height: 100dvh;
@@ -14,15 +16,19 @@ body{
     background-color: #DBC2A6;
     cursor:pointer;
 }
+
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
 }
+
+
 /*Navbar*/
 nav ul{
     list-style: none;
     display: flex;
 }
+
 .navbar{
     background: transparent;
     color: #414A37;
@@ -36,11 +42,13 @@ nav ul{
     display: flex;
     transition: 0.5s ease-in-out;
 }
+
 .navbar.scrolled{
     background-color: #414A37;
     color: white;
     z-index: 1;
 }
+
 .navigation a{
     text-decoration: none;
     color: #414A37;
@@ -50,10 +58,12 @@ nav ul{
     position: relative;
     transition: 0.5s ease-in-out;
 }
+
 .navbar.scrolled .navigation a{
     color: white;
     z-index: 1;
 }
+
 .navigation a::after{
     content: '';
     position: absolute;
@@ -68,20 +78,25 @@ nav ul{
     transform: scaleX(0);
     transition: transform .3s;
 }
+
 .navbar.scrolled .navigation a::after{
     background-color: white;
 }
+
 .navigation a:hover::after{
     transform-origin: left;
     transform: scaleX(1);
 }
+
 .navigation a:active:hover::after{
     transform: scaleX(0);
     transform-origin: right;
 }
+
 .navbar{
     border-bottom: 0.1px solid #414A37;
 }
+
 
 /* MENU */
 .burger{
@@ -92,11 +107,13 @@ nav ul{
   margin: 6px;
 }
 
+
 /*Company Logo*/
 #logo{
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
+
 
 /*Main Container*/
 #container{
@@ -112,37 +129,44 @@ nav ul{
     border-radius: 20px;
     box-shadow: 10px 10px 30px;
 }
+
 #container.scrolled{
     background-color:  #DBC2A6;
     box-shadow: none;
     border-radius: 0;
 }
 
+
 /*Entry Animation*/
 #up{
     transform: translateY(-100px);
     opacity: 0;
 }
+
 #down{
     transform: translateY(100px);
     opacity: 0;
 }
+
 #down.down{
     transform: translateY(0);
     opacity: 1;
     transition: transform 1s ease-out, opacity 1s ease-in;
 }
+
 #up.up{
     transform: translateY(0);
     opacity: 1;
     transition: transform 1s ease-out, opacity 1s ease-in;
 }
 
+
 /*Text Side*/
 h1{
     padding-bottom: 10px;
     letter-spacing: 0.2rem;
 }
+
 .right{
     width: 50%;
     display: flex;
@@ -157,9 +181,11 @@ h1{
     letter-spacing: 0.1rem;
     margin-bottom: 20px;
 }
+
 #container.scrolled .right{
     color: rgb(65, 74, 55);
 }
+
 .right a{
     text-decoration: none;
     color: #414A37;
@@ -171,15 +197,18 @@ h1{
     font-size: 1.3rem;
     font-weight: 500;
 }
+
 .right a:hover{
     text-decoration: underline;
     transform: translateY(-5px);
     box-shadow: 5px 5px 10px black;
 }
+
 #container.scrolled .right a{
     color: rgb(219, 194, 166);
     background-color: #414A37;
 }
+
 
 /*Image Side*/
 .left{
@@ -193,12 +222,15 @@ h1{
     flex-grow: 1;
     filter: drop-shadow(0 0 5px rgba(219, 194, 166,1));
 }
+
 #container.scrolled .left{
     filter: drop-shadow(-35px -3px 1px rgba(65, 74, 55,1));
 }
+
 #links-container button{
     display: none;
 }
+
 
 /*Products or Services*/
 .header{
@@ -206,6 +238,7 @@ h1{
     text-align: center;
     padding-top: 40px;
 }
+
 #products{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -216,15 +249,18 @@ h1{
     padding-bottom: 40px;
     overflow: hidden;
 }
+
 .product{
     opacity: 0;
     transform: translateX(100px);
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
+
 #products .product.visible{
     opacity: 1;
     transform: translateY(0);
 }
+
 .product{
     display: flex;
     flex-direction: column-reverse;
@@ -234,17 +270,20 @@ h1{
     text-decoration: none;
     overflow: hidden;
 }
+
 .product:hover{
     text-decoration: underline;
     transform: translateY(-7px);
     box-shadow: 10px 10px 2cap rgba(65, 74, 55,1);
 }
+
 .product div{
     background-image: url(images/wired.png);
     background-size: cover;
     background-position: center;
     height: 200px;
 }
+
 .product span{
     padding: 20px;
     text-align: center;
@@ -252,6 +291,7 @@ h1{
     font-size: 16px;    
     font-weight: 600;
 }
+
 #image2{
     background-image: url(images/earbud.png);
 }
@@ -274,6 +314,7 @@ h1{
     background-image: url(images/custom.png);
 }
 
+
 /*Footer*/
 footer{
     display: flex;
@@ -288,45 +329,55 @@ footer{
     font-size: 1rem;
     font-weight: 500;
 }
+
 footer h3{
     padding-bottom: 20px;
 }
+
 footer li{
     list-style: none;
 }
+
 footer li a{
     list-style: none;
     text-decoration: none;
     color: white;
 }
+
 footer li a:hover{
     text-decoration: underline;
 }
+
 .container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     
 }
+
 .get-in-touch{
     text-align: start;
     display: flex;
     flex-direction: column;
     align-content: flex-start;   
 }
+
 .extra{
     display: flex;
     flex-direction: column;
     text-align: start;
 }
+
 .newsletter{
     text-align: start;
     max-width: fit-content;
 }
+
 form{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+
 .newsletter input{
     border-radius: 12px;
     padding: 10px 20px;
@@ -338,38 +389,46 @@ form{
     padding: 10px;
     border-radius: 12px;
 }
+
 .newsletter button:hover{
     background-color: #DBC2A6;
 }
+
 .social a svg{
     fill: white;
     height: 32px;
 }
+
 .social a{
     padding: 1em;
 }
+
 .social a svg:hover{
     fill: var(--accent-color);
 }
+
 .social a:nth-child(3) svg:hover{
     background-color: white;
     border-radius: 50%;
 }
+
 .top{
     padding: 20px 10px;
     display: flex;
     justify-content: end;
 }
+
 footer .bottom{
     display: flex;
     justify-content: center;
     border-top: 0.1px solid white;
 }
+
 .copyrights{ 
     text-align: center;
     font-size: 14px;
-
 }
+
 
 /*Responsive*/
 @media (max-width:769px){
@@ -427,6 +486,8 @@ footer .bottom{
         height: 28px;
     }
 }
+
+/*426*/
 @media (max-width:426px){
     body{
         min-height: 100dvh;
@@ -594,6 +655,8 @@ footer .bottom{
         height: 24px;
     }
 }
+
+/*321*/
 @media (max-width: 321px){
     #container{
         margin-top: 50px;
