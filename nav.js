@@ -11,7 +11,7 @@ const observer = new IntersectionObserver((element)=>{
         }
     });
 },{
-    threshold: 0.1
+    threshold: 0.15
 });
 products.forEach(product=>observer.observe(product));
 
