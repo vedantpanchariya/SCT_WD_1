@@ -16,6 +16,7 @@ body{
 }
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
+  font-weight: 600;
 }
 /*Navbar*/
 nav ul{
@@ -88,7 +89,7 @@ nav ul{
   margin: 6px;
 }
 .line{
-    position: fixed;
+    position: fixed;    
     height: 1px;
     width: 100%;
     background-color: #414A37;  
@@ -198,7 +199,7 @@ h1{
 #container.scrolled .left{
     filter: drop-shadow(-35px -3px 1px rgba(65, 74, 55,1));
 }
-button{
+#links-container button{
     display: none;
 }
 
@@ -235,7 +236,6 @@ button{
     overflow: hidden;
     transition: transform 0.3s ease-out;
 }
-
 .product:hover{
     text-decoration: underline;
     transform: translateY(-7px);
@@ -278,17 +278,20 @@ button{
 
 /*Footer*/
 footer{
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+    justify-content: space-between;
     background-color: rgb(0, 0, 0);
     color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 80px 0;
-    align-items: center;
+    text-align: center;
     line-height: 1.5rem;
-    position: relative;
     letter-spacing: 0.1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+footer h3{
+    padding-bottom: 20px;
 }
 footer li{
     list-style: none;
@@ -301,30 +304,73 @@ footer li a{
 footer li a:hover{
     text-decoration: underline;
 }
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+}
+.get-in-touch{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;   
+}
 .extra{
     display: flex;
     flex-direction: column;
+    text-align: start;
 }
 .newsletter{
-    text-align: center;
+    text-align: start;
+    max-width: fit-content;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.newsletter input{
+    border-radius: 12px;
+    padding: 10px 20px;
 }
 
+.newsletter button{
+    background-color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 12px;
+}
+.newsletter button:hover{
+    background-color: #DBC2A6;
+}
 .social a svg{
     fill: white;
-    height: 25px;
+    height: 32px;
 }
-.social{
+.social a{
+    padding: 1em;
+}
+.social a svg:hover{
+    fill: var(--accent-color);
+}
+.social a:nth-child(3) svg:hover{
+    background-color: white;
+    border-radius: 50%;
+}
+.top{
+    padding: 20px 10px;
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    gap: 20px;
-}   
-.copyrights{    
-    position: absolute;
-    bottom: 0;
-    left: 40vw;
+    justify-content: end;
+}
+footer .bottom{
+    display: flex;
+    justify-content: center;
+    border-top: 0.1px solid white;
+}
+.copyrights{ 
+    text-align: center;
+    font-size: 14px;
+
 }
 
 /*Responsive*/
@@ -363,6 +409,15 @@ footer li a:hover{
     }
     .product span{
         padding: 15px;
+    }
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 30px 20px;
+    }
+    
+    .social a svg{
+        height: 28px;
     }
 }
 @media (max-width:426px){
@@ -441,7 +496,7 @@ footer li a:hover{
         z-index: 1001;
         padding: 40px 5px;
     }
-    button{
+    #links-container button{
         display: block;
         background-color: transparent;
     }
@@ -477,6 +532,47 @@ footer li a:hover{
     }
     .product span{
         padding: 15px;
+    }
+    footer{
+        min-height: auto;
+    }
+    
+    .container{
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    .get-in-touch{
+        text-align: center;
+        align-items: center;
+    }
+    
+    .extra{
+        text-align: center;
+        align-items: center;
+    }
+    
+    .newsletter{
+        text-align: center;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .top{
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .social a{
+        padding: 0.5em;
+    }
+    .copyrights{
+        font-size: 0.8rem;
+    }
+    .social a svg{
+        height: 24px;
     }
 }
 @media (max-width: 321px){
