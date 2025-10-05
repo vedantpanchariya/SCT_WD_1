@@ -276,6 +276,57 @@ button{
     background-image: url(images/custom.png);
 }
 
+/*Footer*/
+footer{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 80px 0;
+    align-items: center;
+    line-height: 1.5rem;
+    position: relative;
+    letter-spacing: 0.1rem;
+}
+footer li{
+    list-style: none;
+}
+footer li a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+footer li a:hover{
+    text-decoration: underline;
+}
+.extra{
+    display: flex;
+    flex-direction: column;
+}
+.newsletter{
+    text-align: center;
+}
+
+.social a svg{
+    fill: white;
+    height: 25px;
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    gap: 20px;
+}   
+.copyrights{    
+    position: absolute;
+    bottom: 0;
+    left: 40vw;
+}
+
 /*Responsive*/
 @media (max-width:768px){
     #container{
