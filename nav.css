@@ -367,7 +367,7 @@ footer li a:hover{
 }
 @media (max-width:426px){
     body{
-        min-height: 100dvh;
+        
         max-width: 100%;
     }
     .logo{
