@@ -26,9 +26,10 @@ A fully responsive product landing page built as part of my internship at SkillC
 1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/repo-name.git
+```
 
 ## Project Structure
-
+```bash
 ├── index.html
 ├── nav.css
 ├── nav.js
@@ -36,7 +37,7 @@ git clone https://github.com/yourusername/repo-name.git
     ├── headphones.png
     ├── earbud.png
     └── ...
-
+```
 ## What I Learned :
 
 •Building responsive layouts with CSS Grid and Flexbox
