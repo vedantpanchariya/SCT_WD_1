@@ -58,3 +58,7 @@ git clone https://github.com/vedantpanchariya/SCT_WD_1.git
 <img width="471" height="722" alt="image" src="https://github.com/user-attachments/assets/895c3a7b-480d-4427-862e-1ef271a6dc26" />
 <img width="469" height="720" alt="image" src="https://github.com/user-attachments/assets/5aede2a9-61d6-4cc3-9769-495feef2d332" />
 <img width="468" height="719" alt="image" src="https://github.com/user-attachments/assets/d8021e6a-9a35-4ac2-aba6-8fcceded45a2" />
+
+## License
+
+MIT License
