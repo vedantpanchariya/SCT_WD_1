@@ -1,6 +1,6 @@
 # Product Landing Page
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)]([https://your-link-here.com](https://vedantpanchariya.github.io/SCT_WD_1/))
+[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://vedantpanchariya.github.io/SCT_WD_1/)
 
 A fully responsive product landing page built as part of my internship at SkillCraft Technology.
 
