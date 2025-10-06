@@ -25,7 +25,7 @@ A fully responsive product landing page built as part of my internship at SkillC
 
 1. Clone the repository
 ```bash
-git clone https://vedantpanchariya.github.io/SCT_WD_1/
+git clone https://github.com/vedantpanchariya/SCT_WD_1.git
 ```
 
 ## Project Structure
