@@ -1,4 +1,4 @@
-# Product Landing Page
+<img width="468" height="719" alt="image" src="https://github.com/user-attachments/assets/ade4f267-3015-42b1-a586-74cff92f1ee0" /># Product Landing Page
 
 [![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://vedantpanchariya.github.io/SCT_WD_1/)
 
@@ -25,7 +25,7 @@ A fully responsive product landing page built as part of my internship at SkillC
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/repo-name.git
+git clone https://vedantpanchariya.github.io/SCT_WD_1/
 ```
 
 ## Project Structure
