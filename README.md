@@ -1,4 +1,4 @@
-<img width="468" height="719" alt="image" src="https://github.com/user-attachments/assets/ade4f267-3015-42b1-a586-74cff92f1ee0" /># Product Landing Page
+# Product Landing Page
 
 [![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://vedantpanchariya.github.io/SCT_WD_1/)
 
